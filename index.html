@@ -22,6 +22,36 @@
           <option value="trigonometry">Trigonometry</option>
           <option value="probstats">Probability & Statistics</option>
         </select>
+<select id="difficulty" aria-label="Difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+
+        <button id="generate" class="btn" aria-label="Generate a new problem">Generate Problem</button>
+      </div>
+
+      <div class="problem" aria-live="polite">
+        <div class="problem-text" id="problem">Click <strong>Generate Problem</strong> to begin.</div>
+        <div class="row">
+          <button id="showAnswer" class="btn secondary" aria-expanded="false">Show Answer</button>
+          <button id="copy" class="btn ghost" title="Copy problem to clipboard">Copy</button>
+        </div>
+      </div>
+
+      <div class="answer" id="answer" aria-hidden="true"></div>
+      <div class="hint" id="hint"></div>
+
+      <footer>
+        <span class="badge" id="meta">—</span>
+        <span>Built for schools: minimal UI, readable math, clean code.</span>
+      </footer>
+
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
 
 
 
