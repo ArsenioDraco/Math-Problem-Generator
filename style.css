@@ -61,4 +61,24 @@
       color: var(--muted);
       font-size: clamp(14px, 2.2vw, 16px);
     }
+  .controls{
+      display:grid;
+      grid-template-columns: 1fr 1fr auto;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    select, .btn{
+      appearance: none;
+      border: 1px solid var(--border);
+      background: var(--panel-2);
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: 14px;
+      font-size: 14px;
+      outline: none;
+      transition: box-shadow .2s ease, transform .03s ease, border-color .2s ease;
+    }
+    select:focus, .btn:focus{ box-shadow: 0 0 0 6px var(--ring); }
 
