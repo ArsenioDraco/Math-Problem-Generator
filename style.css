@@ -1,1 +1,26 @@
+:root{
+      --bg: #0b0e14;
+      --panel: #101522;
+      --panel-2: #0c111b;
+      --text: #eaf0ff;
+      --muted: #aab4cc;
+      --accent: #4f8cff;
+      --accent-2: #27c3a9;
+      --border: #1c2436;
+      --ring: rgba(79,140,255,.55);
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root{
+        --bg: #f7f9fc;
+        --panel: #ffffff;
+        --panel-2: #f3f6fb;
+        --text: #0b1020;
+        --muted: #44506a;
+        --accent: #2f6dff;
+        --accent-2: #12a188;
+        --border: #e5eaf3;
+        --ring: rgba(47,109,255,.3);
+      }
+    }
 
