@@ -81,4 +81,17 @@
       transition: box-shadow .2s ease, transform .03s ease, border-color .2s ease;
     }
     select:focus, .btn:focus{ box-shadow: 0 0 0 6px var(--ring); }
+ .btn{
+      background: linear-gradient(180deg, var(--accent), color-mix(in srgb, var(--accent) 70%, black 15%));
+      border-color: transparent;
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .btn.secondary{
+      background: linear-gradient(180deg, var(--panel-2), color-mix(in srgb, var(--panel-2) 80%, black 10%));
+      color: var(--text);
+      border: 1px solid var(--border);
+      font-weight: 600;
+    }
 
