@@ -112,3 +112,29 @@
       display:flex; align-items:center; justify-content:space-between; gap: 16px;
     }
 
+    .problem-text{
+      font-size: clamp(18px, 2.8vw, 22px);
+      font-variant-numeric: tabular-nums slashed-zero;
+    }
+
+    .answer{
+      margin-top: 14px;
+      background: transparent;
+      border-left: 3px solid var(--accent-2);
+      padding: 10px 14px;
+      border-radius: 10px;
+      color: var(--text);
+      display:none;
+      font-size: clamp(16px, 2.4vw, 18px);
+    }
+
+    .hint{
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 14px;
+    }
+
+    .row{ display:flex; gap: 10px; flex-wrap: wrap; align-items:center; }
+    .stretch{ flex:1; }
+
+
