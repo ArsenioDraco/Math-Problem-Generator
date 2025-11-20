@@ -136,5 +136,29 @@
 
     .row{ display:flex; gap: 10px; flex-wrap: wrap; align-items:center; }
     .stretch{ flex:1; }
+.kbd{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      background: var(--panel-2);
+      border:1px solid var(--border);
+      border-radius:8px;
+      padding: 2px 6px;
+      font-size: 12px;
+    }
+
+    footer{
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 12px;
+      display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;
+    }
+
+    .badge{
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: var(--panel-2);
+    }
 
 
