@@ -43,4 +43,16 @@ medium(){
           const A = `x = ${x}`;
           return { q: Q, ans: A, hint: "Gather x terms on one side, constants on the other." };
         },
+hard(){
+          // Quadratic with integer roots: (x-a)(x-b)=0
+          const a = rnd(-6,6);
+          let b = rnd(-6,6);
+          if(b===a) b += (b===6?-1:1);
+          const B = -(a+b), C = a*b;
+          const q = `Solve: x² ${B>=0?'+':''}${B}x ${C>=0?'+':''}${C} = 0`;
+          const ans = `x = ${a} or x = ${b}`;
+          return { q, ans, hint: "Factor the quadratic into (x - r)(x - s)." };
+        }
+      },
+
 
