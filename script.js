@@ -54,5 +54,15 @@ hard(){
           return { q, ans, hint: "Factor the quadratic into (x - r)(x - s)." };
         }
       },
-
+geometry: {
+        easy(){
+          // Rectangle area
+          const w = rnd(3,20), h = rnd(3,15);
+          return {
+            q: `A rectangle has width ${w} cm and height ${h} cm. Find the area.`,
+            ans: `${w*h} cm²`,
+            hint: "Area = width × height."
+          };
+        },
+        
 
