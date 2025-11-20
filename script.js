@@ -64,5 +64,30 @@ geometry: {
             hint: "Area = width × height."
           };
         },
-        
+        medium(){
+          // Circle circumference or area
+          const r = rnd(2,15);
+          const type = choice(["area","circumference"]);
+          if(type==="area"){
+            const area = round(Math.PI*r*r,2);
+            return { q:`A circle has radius ${r} m. Find its area (use π≈3.14).`, ans: `${round(3.14*r*r,2)} m²`, hint:"Area = πr²." };
+          } else {
+            return { q:`A circle has radius ${r} m. Find its circumference (use π≈3.14).`, ans: `${round(2*3.14*r,2)} m`, hint:"Circumference = 2πr." };
+          }
+        },
+        hard(){
+          // Right triangle via Pythagorean triple
+          const triples = [ [3,4,5], [5,12,13], [8,15,17], [7,24,25] ];
+          const k = rnd(1,4);
+          const [a,b,c] = choice(triples).map(n=>n*k);
+          const missing = choice(["leg","hyp"]);
+          if(missing==="leg"){
+            return { q:`Right triangle: hypotenuse ${c} cm, one leg ${a} cm. Find the other leg.`, ans: `${Math.sqrt(c*c - a*a)} cm`, hint:"Use a² + b² = c²." };
+          } else {
+            return { q:`Right triangle legs are ${a} cm and ${b} cm. Find the hypotenuse.`, ans: `${Math.sqrt(a*a + b*b)} cm`, hint:"Use c = √(a² + b²)." };
+          }
+        }
+      },
+
+
 
