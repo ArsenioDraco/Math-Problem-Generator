@@ -107,6 +107,14 @@ medium(){
           const opp = round(Math.tan(angle*Math.PI/180) * adj, 2);
           return { q:`Right triangle: angle θ = ${angle}°, adjacent side = ${adj}. Find the opposite side (2 d.p.).`, ans: `${opp} units`, hint:"Use tan(θ) = opposite/adjacent." };
         },
+hard(){
+          // Given two sides, find an angle via inverse trig
+          const opp = rnd(5,25), hyp = rnd(opp+1, opp+30);
+          const angle = round(Math.asin(opp/hyp) * 180/Math.PI, 2);
+          return { q:`Right triangle: opposite = ${opp}, hypotenuse = ${hyp}. Find angle θ (to 2 d.p.).`, ans: `${angle}°`, hint:"Use sin(θ) = opposite/hypotenuse." };
+        }
+      },
+
 
 
 
