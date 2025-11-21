@@ -114,6 +114,21 @@ hard(){
           return { q:`Right triangle: opposite = ${opp}, hypotenuse = ${hyp}. Find angle θ (to 2 d.p.).`, ans: `${angle}°`, hint:"Use sin(θ) = opposite/hypotenuse." };
         }
       },
+probstats: {
+        easy(){
+          // Mean of a small set
+          const n = rnd(3,5);
+          const arr = Array.from({length:n}, ()=>rnd(1,20));
+          const mean = round(arr.reduce((a,b)=>a+b,0)/n,2);
+          return { q:`Find the mean of the numbers: ${arr.join(', ')} (2 d.p.).`, ans: `${mean}`, hint:"Mean = (sum of values) / (number of values)." };
+        },
+        medium(){
+          // Simple bag probability
+          const red = rnd(2,9), blue = rnd(2,9);
+          const total = red + blue;
+          const p = simplifyFraction(red, total);
+          return { q:`A bag has ${red} red and ${blue} blue balls. One is drawn at random. Probability it is red? (simplify)`, ans: `${p[0]}/${p[1]}`, hint:"P = favourable / total, then reduce the fraction." };
+        },
 
 
 
