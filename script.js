@@ -100,6 +100,13 @@ trigonometry: {
           const ans = oppOrAdj==="opposite" ? round(hyp * (angle===45?Math.sqrt(2)/2: (angle===30?0.5:Math.sqrt(3)/2)),2) : round(hyp * (angle===45?Math.sqrt(2)/2: (angle===60?0.5:Math.sqrt(3)/2)),2);
           return { q, ans: ans+" units", hint: `Use ${oppOrAdj==="opposite"?"sin":"cos"}(${angle}°) = ${oppOrAdj}/hyp.` };
         },
+medium(){
+          // Given angle & adjacent, find opposite using tan
+          const angle = rnd(15,75);
+          const adj = rnd(5,25);
+          const opp = round(Math.tan(angle*Math.PI/180) * adj, 2);
+          return { q:`Right triangle: angle θ = ${angle}°, adjacent side = ${adj}. Find the opposite side (2 d.p.).`, ans: `${opp} units`, hint:"Use tan(θ) = opposite/adjacent." };
+        },
 
 
 
