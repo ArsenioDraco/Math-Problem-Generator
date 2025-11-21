@@ -88,6 +88,18 @@ geometry: {
           }
         }
       },
+trigonometry: {
+        easy(){
+          // 30-60-90 or 45-45-90 known ratios, rounded
+          const angle = choice([30,45,60]);
+          const oppOrAdj = choice(["opposite","adjacent"]);
+          const hyp = rnd(6,20);
+          let val;
+          if(angle===30) val = 0.5; else if(angle===60) val = Math.sqrt(3)/2; else val = Math.sqrt(2)/2;
+          const q = `In a right triangle, angle A = ${angle}°. If hypotenuse = ${hyp}, find the length of the ${oppOrAdj} side (round to 2 decimals).`;
+          const ans = oppOrAdj==="opposite" ? round(hyp * (angle===45?Math.sqrt(2)/2: (angle===30?0.5:Math.sqrt(3)/2)),2) : round(hyp * (angle===45?Math.sqrt(2)/2: (angle===60?0.5:Math.sqrt(3)/2)),2);
+          return { q, ans: ans+" units", hint: `Use ${oppOrAdj==="opposite"?"sin":"cos"}(${angle}°) = ${oppOrAdj}/hyp.` };
+        },
 
 
 
