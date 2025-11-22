@@ -173,6 +173,15 @@ document.getElementById('generate').addEventListener('click', ()=>{
       $show.textContent = isHidden ? 'Hide Answer' : 'Show Answer';
       $show.setAttribute('aria-expanded', String(isHidden));
     });
+document.getElementById('copy').addEventListener('click', async ()=>{
+      const text = `Problem: ${$problem.textContent}\n` + ($answer.style.display!=='none' ? `${$answer.textContent}` : '');
+      try { await navigator.clipboard.writeText(text); 
+        const btn = document.getElementById('copy');
+        const txt = btn.textContent; btn.textContent = 'Copied!';
+        setTimeout(()=>btn.textContent = txt, 900);
+      } catch(err){ alert('Copy failed.'); }
+    });
+
 
 
 
