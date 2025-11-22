@@ -166,6 +166,13 @@ document.getElementById('generate').addEventListener('click', ()=>{
       const difficulty = document.getElementById('difficulty').value;
       setProblem(generate(category, difficulty));
     });
+ document.getElementById('showAnswer').addEventListener('click', ()=>{
+      const isHidden = $answer.style.display === 'none';
+      $answer.style.display = isHidden ? 'block' : 'none';
+      $answer.setAttribute('aria-hidden', String(!isHidden));
+      $show.textContent = isHidden ? 'Hide Answer' : 'Show Answer';
+      $show.setAttribute('aria-expanded', String(isHidden));
+    });
 
 
 
