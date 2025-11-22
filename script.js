@@ -152,6 +152,15 @@ hard(){
     const $hint = document.getElementById('hint');
     const $meta = document.getElementById('meta');
     const $show = document.getElementById('showAnswer');
+function setProblem(payload){
+      $problem.innerHTML = payload.q;
+      $answer.textContent = `Answer: ${payload.ans}`;
+      $hint.textContent = payload.hint || '';
+      $answer.style.display = 'none';
+      $answer.setAttribute('aria-hidden','true');
+      $show.setAttribute('aria-expanded','false');
+      $meta.textContent = `${payload.cat[0].toUpperCase()+payload.cat.slice(1)} · ${new Date().toLocaleTimeString()} · ${document.getElementById('difficulty').value}`;
+    }
 
 
 
