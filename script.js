@@ -161,6 +161,11 @@ function setProblem(payload){
       $show.setAttribute('aria-expanded','false');
       $meta.textContent = `${payload.cat[0].toUpperCase()+payload.cat.slice(1)} · ${new Date().toLocaleTimeString()} · ${document.getElementById('difficulty').value}`;
     }
+document.getElementById('generate').addEventListener('click', ()=>{
+      const category = document.getElementById('category').value;
+      const difficulty = document.getElementById('difficulty').value;
+      setProblem(generate(category, difficulty));
+    });
 
 
 
