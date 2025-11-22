@@ -139,6 +139,13 @@ hard(){
         }
       }
     };
+  function generate(category, difficulty){
+      const cats = category === 'any' ? Object.keys(Generators) : [category];
+      const cat = choice(cats);
+      const gen = Generators[cat][difficulty] || Generators[cat]["medium"];
+      const { q, ans, hint } = gen();
+      return { cat, q, ans, hint };
+    }
 
 
 
