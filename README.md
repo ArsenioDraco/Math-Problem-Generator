@@ -52,3 +52,6 @@ The Math Problem Generator is a browser-based tool for creating fully randomized
 
 ## Personal Note
 This was my second project using JavaScript, and I am happy with how it turned out. The idea for this site came from my desire to create a generator, but not a trivial one like a name generator—I wanted it to be genuinely useful. That, combined with my growing interest in mathematics, allowed this idea to take shape and come to fruition. High school math provides a solid baseline of concepts that a person should understand, and this site aims to capture them. I plan to build more websites that apply various types of mathematics as well as other concepts.
+
+## Github pages link:
+https://arseniodraco.github.io/Math-Problem-Generator/
