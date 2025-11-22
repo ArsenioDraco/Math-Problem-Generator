@@ -146,6 +146,13 @@ hard(){
       const { q, ans, hint } = gen();
       return { cat, q, ans, hint };
     }
+ // DOM wiring
+    const $problem = document.getElementById('problem');
+    const $answer = document.getElementById('answer');
+    const $hint = document.getElementById('hint');
+    const $meta = document.getElementById('meta');
+    const $show = document.getElementById('showAnswer');
+
 
 
 
