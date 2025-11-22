@@ -181,6 +181,15 @@ document.getElementById('copy').addEventListener('click', async ()=>{
         setTimeout(()=>btn.textContent = txt, 900);
       } catch(err){ alert('Copy failed.'); }
     });
+// Keyboard shortcuts
+    window.addEventListener('keydown', (e)=>{
+      if(e.target.matches('input, textarea')) return;
+      if(e.key.toLowerCase()==='g') document.getElementById('generate').click();
+      if(e.key.toLowerCase()==='a') document.getElementById('showAnswer').click();
+    });
+
+    // Generate one on first load
+    setProblem(generate('any', 'medium'));
 
 
 
