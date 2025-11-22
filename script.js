@@ -129,6 +129,16 @@ probstats: {
           const p = simplifyFraction(red, total);
           return { q:`A bag has ${red} red and ${blue} blue balls. One is drawn at random. Probability it is red? (simplify)`, ans: `${p[0]}/${p[1]}`, hint:"P = favourable / total, then reduce the fraction." };
         },
+hard(){
+          // Median of odd-length set
+          const n = 5;
+          const arr = Array.from({length:n}, ()=>rnd(1,50));
+          const sorted = [...arr].sort((a,b)=>a-b);
+          const median = sorted[(n-1)/2];
+          return { q:`Find the median of: ${arr.join(', ')}`, ans: `${median}`, hint:"Sort the list; pick the middle value." };
+        }
+      }
+    };
 
 
 
